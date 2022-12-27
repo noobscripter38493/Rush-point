@@ -140,7 +140,6 @@ end
 SetupBhop()
 plr.CharacterAdded:Connect(SetupBhop)
 
---restorefunction(getrawmetatable(game).__newindex)
 local idx; idx = hookmetamethod(game, "__newindex", function(self, i, v)
     if i == "WalkSpeed" and _G.WalkSpeedToggle then
         v = _G.WalkSpeed
