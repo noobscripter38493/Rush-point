@@ -58,7 +58,7 @@ local nc; nc = hookmetamethod(game, "__namecall", function(self, ...)
         for _, v in next, Characters.GetChildren(Characters) do
             local TheirHead = v.FindFirstChild(v, "Head")
             if v.Name ~= plr.Name and TheirHead then
-                if _G.TeamCheck and not IsOnTeam(v) then
+                if _G.TeamCheck and IsOnTeam(v) then
                     continue
                 end
 
